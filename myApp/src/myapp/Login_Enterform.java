@@ -223,7 +223,11 @@ public class Login_Enterform extends javax.swing.JFrame {
 
     private void b_enterloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_enterloginActionPerformed
         if (t_employeename.getText().length() == 0 || t_password.getText().length() == 0) { 
-            JOptionPane.showMessageDialog(null, "Please enter information");
+            JOptionPane.showMessageDialog(null, "Please enter information","ERROR",JOptionPane.ERROR_MESSAGE);
+        }
+        else { 
+            Loading loading = new Loading();
+            loading.setVisible(true);
         }
     }//GEN-LAST:event_b_enterloginActionPerformed
 

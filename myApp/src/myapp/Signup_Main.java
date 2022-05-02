@@ -261,12 +261,16 @@ public class Signup_Main extends javax.swing.JFrame {
 
     private void b_entersignupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_entersignupActionPerformed
         if (t_signupemployeename.getText().length() == 0 || t_signuppassword.getText().length() == 0 || t_confirm_pw.getText().length() == 0|| t_email.getText().length() == 0 || t_vecode.getText().length() == 0)
-            JOptionPane.showMessageDialog(null, "Please enter information");
+            JOptionPane.showMessageDialog(null, "Please enter information","ERROR",JOptionPane.ERROR_MESSAGE);
         else {
             if (t_signupemployeename.getText().equals(t_signuppassword.getText()) == true)
-                JOptionPane.showMessageDialog(null, "The password cannot match the user name");
+                JOptionPane.showMessageDialog(null, "The password cannot match the user name","ERROR",JOptionPane.ERROR_MESSAGE);
             if (t_signuppassword.getText().equals(t_confirm_pw.getText()) == false)
-                JOptionPane.showMessageDialog(null, "Passwords does not match");
+                JOptionPane.showMessageDialog(null, "Passwords does not match","ERROR",JOptionPane.ERROR_MESSAGE);
+            if (t_signuppassword.getText().length() < 8)
+                JOptionPane.showMessageDialog(null, "Your password must be at least eight characters long","ERROR",JOptionPane.ERROR_MESSAGE);
+            else 
+                JOptionPane.showMessageDialog(null, "Sign Up Success","SUCCESS",JOptionPane.INFORMATION_MESSAGE);
         }
         
     }//GEN-LAST:event_b_entersignupActionPerformed

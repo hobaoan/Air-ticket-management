@@ -190,12 +190,12 @@ public class Login_Confirm extends javax.swing.JFrame {
     });
     
     private void b_LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_LoginActionPerformed
-        new Login_Confirm();
+        
     }//GEN-LAST:event_b_LoginActionPerformed
 
     private void b_enterloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_enterloginActionPerformed
         if (t_email.getText().length() == 0) 
-            JOptionPane.showMessageDialog(null, "Please enter information");
+            JOptionPane.showMessageDialog(null, "Please enter information","ERROR",JOptionPane.ERROR_MESSAGE);
         else 
             JOptionPane.showInputDialog("Confirm","Enter your Verification");
     }//GEN-LAST:event_b_enterloginActionPerformed
